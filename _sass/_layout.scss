@@ -159,11 +159,189 @@
 
 
 /**
+  * Site About Section
+  */
+.about-section {
+  h3 {
+    color: $text-color;
+    text-align: center;
+    padding: 100px 0 30px;
+  }
+
+  .face-lockup {
+    max-width: 780px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+
+    .face-img {
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-image: url(../assets/img/face.jpg);
+      width: 200px;
+      height: 200px;
+      order: 3;
+    }
+
+    [class^="icon-"]{
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      background: #e5eaee;
+      border-radius: 50%;
+
+      &.icon-globe{
+        order: 1;
+      }
+      &.icon-camera{
+        order: 2;
+      }
+      &.icon-laptop{
+        order: 4;
+      }
+      &.icon-sushi{
+        order: 5;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px){
+    .face-lockup{
+      display: block;
+      text-align: center;
+
+      div{
+        display: inline-block;
+      }
+
+      .face-img{
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: auto;
+        margin-bottom: 0 auto 30px;
+      }
+
+      [class^="icon-"]{
+        margin: 10px 9%;
+      }
+    }
+  }
+
+  .blurb{
+    max-width: 620px;
+    padding: 0 20px;
+    margin: 50px auto;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  /**
+    * Skills Section
+    */
+  .skill-lockup{
+    max-width: 540px;
+    margin: 100px auto;
+    color: #999;
+
+    .clearfix{
+      overflow: auto;
+      zoom: 1;
+    }
+
+    .skill-unit{
+      width: 270px;
+      float: left;
+    }
+    .skill-icons{
+      font-size: 0;
+      margin-bottom: 3px 0 30px;
+
+      span{
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+        background-color: #30c4cc;
+        margin-right: 8px;
+        border-radius: 50%;
+
+        &:after{
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          background: #fff;
+          border-radius: 50%;
+          margin: 2px;
+        }
+      }
+
+      // v v NEAT solution with Sass
+      @for $i from 1 through 10{
+        &.skill-#{$i} span:nth-child(n+#{$i+1}){
+          @extend %skill-color;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 541px){
+    .skill-lockup{
+      width: 220px;
+
+      .skill-unit{
+        width: 220px;
+      }
+    }
+  }
+
+  // placeholder color reversed
+  %skill-color{
+    background: #999;
+  }
+
+}
+
+
+/**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    //font for titles and for header purposes -- ~aesthetic~
+    font-family: $base-header-font-family;
+    background: url(../assets/img/346H.jpg);
+    background-size: cover;
+
+    .lockup{
+      padding: 50px 30px;
+
+      .content-wrap{
+        float: left;
+
+        .copyright{
+          margin: 0;
+          text-transform: uppercase;
+          font-size: 12px;
+          color: rgba(0,0,0,0.7);
+        }
+        a {
+          color: rgba(0,0,0,7);
+          display: inline-block;
+          margin-right: 30px;
+
+          &:hover{
+            text-decoration: none;
+            color: pink;
+            -webkit-transition: all 0.3s ease-out;
+          	-moz-transition: all 0.3s ease-out;
+          	-o-transition: all 0.3s ease-out;
+          	transition: all 0.3s ease-out;
+          }
+        }
+      }
+    }
 }
 
 .footer-heading {
