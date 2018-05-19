@@ -1,4 +1,6 @@
 # Build settings
 markdown: kramdown
 
+future: true
+
 port: 8080
