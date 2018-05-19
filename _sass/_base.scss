@@ -25,6 +25,20 @@ body {
     font-kerning: normal;
 }
 
+/* h3 needed for sections
+*/
+h3 {
+  color: $main-accent-color;
+  text-align: center;
+  padding: 100px 0 30px;
+}
+
+@media screen and (max-width: 480){
+  h3{
+    padding: 50px 0 50px;
+  }
+}
+
 
 
 /**

@@ -6,6 +6,7 @@
 
 
 // Our variables
+$main-accent-color: #30c4cc;
 $base-header-font-family: "Abel", sans-serif;
 $base-font-family: "Ubuntu", sans-serif;
 $base-font-size:   16px;
@@ -22,6 +23,8 @@ $brand-color:      #2a7ae2;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$link-color: $main-accent-color;
 
 // Width of the content area
 $content-width:    800px;

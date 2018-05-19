@@ -1,5 +1,5 @@
 <section class="about-section">
-  <h3>About Romina</h3>
+  <h3 id="about">About Romina</h3>
 
   <div class="face-lockup">
     <div class="face-img"></div>
@@ -11,85 +11,29 @@
   </div>
 
   <div class="blurb">
-    <p>Hi! I am Romina, a Computer Engineer graduated from Iowa State University.
-      My focus is software development of all kinds, mobile (Android), application and web.
-      Currently, I am looking for the right company to dedicate my free-spirited mind and skills in.</p>
-    <p>When I am not coding for the better good, I'm most likely searching for the
-      best photo to take, best scene to draw, best story to read or best film to watch.</p>
+    {{ site.data.settings.blurb }}
   </div>
 
-    <div class="skill-lockup clearfix">
+  <!-- Fix for skills in settings.yml
+      - by using this for loop, 50+ lines of code have gone puff -->
+  {% if site.data.settings.skills %}
+
+    <div class="skill-lockup">
+
+      {% for skill in site.data.settings.skills %}
+
       <div class="skill-unit">
-        <div class="skill-label">Java</div>
-        <div class="skill-icons skill-8">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
+        <div class="skill-label">{{ skill.name }}</div>
+        <div class="skill-icons skill-{{ skill.value }}">
+          {% for i in (1..10) %}
+          <span></span>
+          {% endfor %}
         </div>
       </div>
 
-      <div class="skill-unit">
-        <div class="skill-label">C</div>
-        <div class="skill-icons skill-7">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <div class="skill-unit">
-        <div class="skill-label">JavaScript</div>
-        <div class="skill-icons skill-7">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">HTML + CSS (SASS)</div>
-      <div class="skill-icons skill-7">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">Python</div>
-      <div class="skill-icons skill-5">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label ">Android</div>
-      <div class="skill-icons skill-5">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">PHP</div>
-      <div class="skill-icons skill-3">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">C#</div>
-      <div class="skill-icons skill-2">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">Ruby</div>
-      <div class="skill-icons skill-2">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
+      {% endfor %}
   </div>
+
+  {% endif %}
 
 </section>
