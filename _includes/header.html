@@ -1,13 +1,12 @@
 <header class="site-header">
 
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
+      {% for item in site.data.settings.menu %}
+        <a href="{{ item.url }}"> {{ item.name }} </a>
+      {% endfor %}
     </nav>
 
     <h1> <a href="{{ site.data.settings.baseurl }}/"><span>{{ site..data.settings.title }}</span></a></h1>
-    <p class="kicker">Programmer | Entertainer | Sushi Lover</p>
+    <p class="kicker">{{ site.data.settings.description }}</p>
 
 </header>
