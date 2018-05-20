@@ -163,6 +163,7 @@
   */
 .about-section {
   @extend %clearfix;
+  padding-bottom: 100px;
   .face-lockup {
     max-width: 780px;
     display: flex;
@@ -302,6 +303,7 @@
 .project-section{
   overflow-x: hidden;
   @extend %clearfix;
+  padding-bottom:100px;
 
   .project-belt{
     width: 200%;
@@ -318,7 +320,6 @@
   .thumb-container{
     max-width: 960px;
     margin: 0px auto;
-    padding-bottom: 100px;
 
     .thumb-unit{
       display: block;
@@ -385,7 +386,6 @@
   .project-container{
     max-width: 600px;
     margin: 0px auto;
-    padding-bottom: 100px;
     position: relative;
     display: none;
 
@@ -452,6 +452,7 @@
     background-size: cover;
     background-position: 50%;
     background-blend-mode: normal;
+    padding-bottom: 40px;
 
     .lockup{
       padding: 50px 30px;
@@ -469,6 +470,9 @@
           color: rgba(255,255,255,255);
           display: inline-block;
           margin-right: 30px;
+          font-size: 14px;
+          // font-weight: bold;
+          text-transform: uppercase;
 
           &:hover{
             text-decoration: none;
