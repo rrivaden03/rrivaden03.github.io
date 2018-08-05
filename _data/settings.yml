@@ -44,7 +44,7 @@ skills:
 # PROJECT section
 projects:
   - {name: Miniature Greenhouses, folder: 'proj-1'}
-  - {name: Bike-Share, folder: 'proj-2'}
+  - {name: Bike-Share, folder: 'proj-2', file: 'work/proj-2.html'}
   - {name: ISU Dance Marathon, folder: 'proj-3'}
   - {name: Aptus, folder: 'proj-4'}
   - {name: Personal Website, folder: 'proj-5'}

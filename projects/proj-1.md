@@ -1,7 +1,7 @@
 ---
 title: Miniature Greenhouses
 ---
-![Miniature Greenhouses]({{ site.github.url }}/assets/img/project/proj-1/img-1.jpg)
+![Miniature Greenhouses]({{ site.github.url }}/assets/img/project/proj-1/img-1.JPG)
 
 The project consists of a series of components working together to monitor plants' development.
 Within these components the system is able to control temperature, watering, imaging and lighting of said plants.
