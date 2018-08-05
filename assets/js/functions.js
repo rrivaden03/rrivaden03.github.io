@@ -38,8 +38,8 @@ function projectLoad() {
         newTitle = $this.find('strong').text(),
         newFolder = $this.data('folder'),
         spinner = '<div class="loader">Loading...</div>',
-        // newHTML = '/projects/' + newFolder + '.html';
-        newHTML = '/projects/' + newFolder;
+        newHTML = '/projects/' + newFolder + '.html';
+        // newHTML = '/projects/' + newFolder;
 
     $('.project-load').html(spinner).load(newHTML);
     $('.project-title').text(newTitle);
