@@ -22,7 +22,7 @@ menu:
 # ABOUT SECTION
 
 blurb: <p>Hi! I am Romina, a Computer Engineer graduated from Iowa State University currently working at
-  Radio Sysrtems Corporation in Knoxville, TN. My main focus is developing firmware and software solutions with the
+  Radio Systems Corporation in Knoxville, TN. My main focus is developing firmware and software solutions with the
   Internet of Things software team at the company. Lastly, if you are remotely curious, RSC is a pet technology company and has
   little to do with radios.</p>
   <p>When I am not coding for the better good, I'm most likely searching for the
@@ -30,7 +30,7 @@ blurb: <p>Hi! I am Romina, a Computer Engineer graduated from Iowa State Univers
 
 skills:
 - {name: Java, value: '8'}
-- {name: C, value: '8'}
+- {name: C + Embedded C, value: '8'}
 - {name: JavaScript, value: '7'}
 - {name: HTML + CSS (SASS), value: '7'}
 - {name: Python, value: '6'}
