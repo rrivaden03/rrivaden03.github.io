@@ -6,11 +6,11 @@
     font-family: $base-header-font-family;
 
     min-height: 450px;
-    background: url(../assets/img/346H_25.jpg) center center;
+    background: url(../assets/img/tech-3.jpeg) center center;
     background-size: cover;
 
     nav {
-      float: right;
+      float: left;
       margin: 30px 30px 0 0;
       a {
         display: inline-block;
@@ -450,7 +450,7 @@
     @extend %clearfix;
     //font for titles and for header purposes -- ~aesthetic~
     font-family: $base-header-font-family;
-    background-image: url(../assets/img/346H.jpg);
+    background-image: url(../assets/img/tech-3.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
