@@ -12,8 +12,8 @@ github_username:  rrivaden03
 #---------------------
 # MENU LIST
 menu:
-  - {name: About Me, url: '#'}
-  - {name: Projects, url: '#'}
+  - {name: About Me, url: '#about'}
+  - {name: Projects, url: '#projects'}
   - {name: Resume, url: '#'}
   - {name: Contact, url: '#'}
 
@@ -29,8 +29,8 @@ blurb: <p>Hi! I am Romina, a Computer Engineer graduated from Iowa State Univers
   best photo to take, best scene to draw, best story to read or best film to watch.</p>
 
 skills:
+- {name: C + Embedded C, value: '9'}
 - {name: Java, value: '8'}
-- {name: C + Embedded C, value: '8'}
 - {name: JavaScript, value: '7'}
 - {name: HTML + CSS (SASS), value: '7'}
 - {name: Python, value: '6'}
@@ -43,11 +43,12 @@ skills:
 #-------------------------
 # PROJECT section
 projects:
-  - {name: Miniature Greenhouses, folder: 'proj-1'}
-  - {name: Bike-Share, folder: 'proj-2', file: 'work/proj-2.html'}
-  - {name: ISU Dance Marathon, folder: 'proj-3'}
+  - {name: IoT PetSafe Products, folder: 'proj-1'}
+  - {name: Miniature Greenhouses, folder: 'proj-2'}
+  # , file: 'work/proj-2.html'
+  - {name: Bike-Share, folder: 'proj-3'}
   - {name: Aptus, folder: 'proj-4'}
-  - {name: Personal Website, folder: 'proj-5'}
-  - {name: ISSO Website, folder: 'proj-6'}
-  - {name: Miniature Greenhouses, folder: 'proj-7'}
-  - {name: Miniature Greenhouses, folder: 'proj-8'}
+  # - {name: Personal Website, folder: 'proj-5'}
+  # - {name: ISSO Website, folder: 'proj-6'}
+  # - {name: Miniature Greenhouses, folder: 'proj-7'}
+  # - {name: Miniature Greenhouses, folder: 'proj-8'}

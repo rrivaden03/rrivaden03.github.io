@@ -244,7 +244,7 @@
   .skill-lockup{
     max-width: 540px;
     margin: 0px auto 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     color: #999;
 
     .skill-unit{
@@ -312,7 +312,7 @@
     width: 200%;
     position: relative;
     left: 0%;
-    transition: all, 500ms;
+    transition: all, 550ms;
   }
 
   .thumb-wrap, .project-wrap {
@@ -321,7 +321,7 @@
   }
 
   .thumb-container{
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0px auto;
 
     .thumb-unit{
