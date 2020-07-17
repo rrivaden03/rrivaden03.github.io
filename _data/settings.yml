@@ -15,7 +15,7 @@ menu:
   - {name: About Me, url: '#about'}
   - {name: Projects, url: '#projects'}
   - {name: Resume, url: '#'}
-  - {name: Contact, url: '#'}
+  - {name: Contact, url: '#contact'}
 
 
 #---------------------
