@@ -7,12 +7,15 @@
 
 // Our variables
 $main-accent-color: #30c4cc;
+$main-accent-color-transparent: #8ce8ee;
 $base-header-font-family: "Abel", sans-serif;
 $base-font-family: "Ubuntu", sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+
+$h3-font-size: 26px;
 
 $spacing-unit:     30px;
 
@@ -55,5 +58,6 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting",
         "animations",
-        "spinner"
+        "spinner",
+        "icon-font"
 ;

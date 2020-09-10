@@ -4,14 +4,13 @@
 .site-header {
     //font for titles and for header purposes -- ~aesthetic~
     font-family: $base-header-font-family;
-
-    min-height: 450px;
     background: url(../assets/img/tech-3.jpeg) center center;
     background-size: cover;
+    padding-bottom: 50px;
 
     nav {
       float: left;
-      margin: 30px 30px 0 0;
+      padding: 30px 30px 0 0;
       a {
         display: inline-block;
         margin-left: 20px;
@@ -70,8 +69,24 @@
       color: white;
     }
 
+    @media (max-width: 640px) {
+
+      background-position: 50% 20px, 50% 50%;
+      nav {
+        float: none;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      h1 {
+        padding-top: 0px;
+      }
+  }
+
+
     // Positioning context for the mobile navigation icon
-    position: relative;
+    // position: relative;
 }
 
 .site-title {
@@ -244,12 +259,15 @@
   .skill-lockup{
     max-width: 540px;
     margin: 0px auto 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     color: #999;
 
     .skill-unit{
       width: 270px;
       float: left;
+    }
+    .skill-label {
+      margin-bottom: 4px;
     }
     .skill-icons{
       font-size: 0;
@@ -312,7 +330,7 @@
     width: 200%;
     position: relative;
     left: 0%;
-    transition: all, 500ms;
+    transition: all, 550ms;
   }
 
   .thumb-wrap, .project-wrap {
@@ -321,7 +339,7 @@
   }
 
   .thumb-container{
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0px auto;
 
     .thumb-unit{
@@ -367,8 +385,9 @@
           color: white;
           font-weight: 300;
           text-transform: uppercase;
-          font-size: 20px;
+          font-size: 24px;
           line-height: 1.2;
+          // text-shadow: 1px 1px 3px black;
         }
 
       }
@@ -396,7 +415,7 @@
       color: $main-accent-color;
       font-weight: 300;
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 1.2;
       margin: 0px 0px 20px;
     }
@@ -440,6 +459,100 @@
 .alt-section{
   background: #e5eaee;
 }
+
+
+/**
+  * Site contact section
+  */
+
+  .contact-section {
+    text-align: center;
+  }
+
+  .social-links {
+    max-width: 700px;
+    margin: 0px auto 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  
+    a {
+       display: block;
+       border: 2px solid $main-accent-color;
+       height: 50px;
+       width: 50px;
+       line-height: 50px;
+       color: $main-accent-color;
+       border-radius: 50%;
+       font-size: 28px;
+       margin: 20px;
+       position: relative;
+       text-decoration: none;
+
+       &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        border: 2px solid $main-accent-color;
+        border-radius: 50%;
+        margin: -2px;
+        opacity: 1;
+        // transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+       }
+
+       &:hover {
+         transform: scale(1.2);
+         -webkit-transition: all 0.3s ease-out;
+         -moz-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+         opacity: 60%;
+       }
+
+       &:hover:after {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0; 
+      }
+    }
+  }
+
+  .bar {
+    width: 300px;
+    height: 0px;
+    border: none;
+    border-top: 4px solid $main-accent-color;
+    margin: 0px auto 50px;
+  }
+
+  .biglink {
+    display: inline-block;
+    color: $main-accent-color;
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1;
+    padding-bottom: 50px;
+    margin: 0 auto;
+
+    &:hover{
+      text-decoration: none;
+      color: $main-accent-color;
+      opacity: 60%;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+  }
 
 
 
