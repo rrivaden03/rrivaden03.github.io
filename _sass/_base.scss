@@ -9,6 +9,23 @@ dl, dd, ol, ul, figure {
 }
 
 
+/* Selection colors (easy to forget)
+ * ------------------------------------	 */
+ ::selection {
+    background: $main-accent-color-transparent; }
+  
+  ::-moz-selection {
+    background: $main-accent-color-transparent; }
+  
+  img::selection {
+    background: transparent; }
+  
+  img::-moz-selection {
+    background: transparent; }
+  
+  body {
+    -webkit-tap-highlight-color: $main-accent-color-transparent; }
+
 
 /**
  * Basic styling
@@ -23,6 +40,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    line-height: $base-line-height;
 }
 
 /* h3 needed for sections

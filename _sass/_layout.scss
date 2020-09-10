@@ -490,7 +490,7 @@
        text-decoration: none;
 
        &:after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: 0px;
@@ -501,7 +501,10 @@
         border-radius: 50%;
         margin: -2px;
         opacity: 1;
-        transition: all 0.3s ease-out;
+        // transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
        }
 
        &:hover {
@@ -511,13 +514,23 @@
          -o-transition: all 0.3s ease-out;
          opacity: 60%;
        }
+
+       &:hover:after {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0; 
+      }
     }
   }
 
   .bar {
     width: 300px;
     height: 0px;
-    border-top: 5px solid $main-accent-color;
+    border: none;
+    border-top: 4px solid $main-accent-color;
     margin: 0px auto 50px;
   }
 
@@ -528,6 +541,7 @@
     font-weight: 300;
     line-height: 1;
     padding-bottom: 50px;
+    margin: 0 auto;
 
     &:hover{
       text-decoration: none;
