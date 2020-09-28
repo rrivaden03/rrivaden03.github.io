@@ -4,13 +4,17 @@
 .site-header {
     //font for titles and for header purposes -- ~aesthetic~
     font-family: $base-header-font-family;
-    background: url(../assets/img/tech-3.jpeg) center center;
-    background-size: cover;
+    background: url(../assets/img/logo.png), url(../assets/img/tech-3.jpeg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40px 40px, cover;
+    background-position: 30px 20px, 50% 50%;
+    background-blend-mode: normal, normal;
     padding-bottom: 50px;
 
     nav {
       float: left;
       padding: 30px 30px 0 0;
+      transform: translate(75px, 0px);
       a {
         display: inline-block;
         margin-left: 20px;
@@ -75,8 +79,10 @@
       nav {
         float: none;
         text-align: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        // Return to its original position so nav is at the center
+        transform: translate(0px, 0px);
+        padding-top: 75px;
+        padding-bottom: 25px;
       }
 
       h1 {
@@ -588,6 +594,7 @@
           margin-right: 30px;
           font-size: 16px;
           // font-weight: bold;
+          font-weight: 700;
           text-transform: uppercase;
 
           &:hover{
