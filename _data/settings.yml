@@ -45,7 +45,7 @@ projects:
   - {name: Connected Pet Products, folder: 'proj-1'}
   - {name: Miniature Greenhouses, folder: 'proj-2'}
   - {name: Bike-Share, folder: 'proj-3'}
-  - {name: Aptus, folder: 'proj-4'}
+  # - {name: Aptus, folder: 'proj-4'}
   # - {name: Personal Website, folder: 'proj-5'}
   # - {name: ISSO Website, folder: 'proj-6'}
   # - {name: Miniature Greenhouses, folder: 'proj-7'}
