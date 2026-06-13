@@ -95,12 +95,15 @@ export const site = {
   ],
 
   hobbies: [
-    { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Working on that serve.', image: '/tennis.jpg' },
-    { name: 'Photography', color: 'bg-orange-400 text-stone-900', blurb: 'Finding the perfect shot.' },
-    { name: 'Drawing', color: 'bg-violet-400 text-white', blurb: 'Pencils and pixels.' },
-    { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Never enough pages.' },
-    { name: 'Film', color: 'bg-rose-400 text-white', blurb: 'Always hunting a good plot twist.' },
-    { name: 'Sushi', color: 'bg-yellow-300 text-stone-900', blurb: 'A deep and important passion.' },
+    { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Doubles champion. Serves still pending.', image: '/tennis.jpg', objectPos: '50% 85%' },
+    { name: 'Photography', color: 'bg-orange-400 text-stone-900', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: '/cliffs.jpg', objectPos: 'center' },
+    { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Dark, tense, mysterious, and somehow also hopeful.', progress: { current: 23, goal: 53 }, genres: ['Thriller', 'Sci-Fi', 'Romance', 'Historical Fiction', 'Non-Fiction'] },
+    { name: '& Also', color: 'bg-stone-700 text-white', also: [
+      'On repeat today: Billy Talent, Rawayana, Bad Bunny, Gorillaz. The algorithm has trust issues.',
+      'Will draw it. Won\'t finish it.',
+      'Sushi. Non-negotiable.',
+      'Video games. Occasionally. Competitively.',
+    ]},
   ],
 
   personalFacts: [

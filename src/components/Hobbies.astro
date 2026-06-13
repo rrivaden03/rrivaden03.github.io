@@ -12,30 +12,62 @@ import { site } from '../data/content';
       </p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 gap-4">
       {site.hobbies.map((hobby, i) => (
         hobby.image ? (
           /* Photo card */
           <div
-            class={`reveal reveal-delay-${(i % 4) + 1} group relative rounded-2xl overflow-hidden transition-transform duration-200 hover:-translate-y-1 cursor-default`}
-            style="min-height: 200px;"
+            class={`reveal reveal-delay-${(i % 4) + 1} group relative rounded-2xl overflow-hidden transition-transform duration-200 hover:-translate-y-1 cursor-default aspect-[4/3]`}
           >
             <img
               src={hobby.image}
               alt={hobby.name}
-              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              style={`object-position: ${hobby.objectPos ?? 'center'}`}
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/85 via-stone-900/30 to-transparent"></div>
-            <div class="relative p-6 md:p-8 flex flex-col justify-end h-full" style="min-height: 200px;">
-              <h3 class="font-display text-xl md:text-2xl font-black text-white mb-1">{hobby.name}</h3>
-              <p class="font-body text-xs md:text-sm text-white/70 leading-relaxed">{hobby.blurb}</p>
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/30 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="bg-stone-900/60 backdrop-blur-sm text-white text-xs font-bold font-body px-3 py-1.5 rounded-full">
+                {hobby.name}
+              </span>
+            </div>
+          </div>
+        ) : hobby.also ? (
+          /* & Also card */
+          <div class={`reveal reveal-delay-${(i % 4) + 1} rounded-2xl p-7 md:p-9 ${hobby.color} transition-transform duration-200 hover:-translate-y-1 cursor-default`}>
+            <h3 class="font-display text-2xl md:text-3xl font-black mb-5">{hobby.name}</h3>
+            <div class="space-y-2.5">
+              {hobby.also.map((line: string) => (
+                <p class="font-body text-sm text-white/80 flex gap-2.5 items-start">
+                  <span class="text-lime-400 font-bold shrink-0">—</span>
+                  <span>{line}</span>
+                </p>
+              ))}
             </div>
           </div>
         ) : (
           /* Color card */
-          <div class={`reveal reveal-delay-${(i % 4) + 1} group rounded-2xl p-6 md:p-8 ${hobby.color} transition-transform duration-200 hover:-translate-y-1 cursor-default`}>
-            <h3 class="font-display text-xl md:text-2xl font-black mb-2">{hobby.name}</h3>
-            <p class="font-body text-xs md:text-sm opacity-70 leading-relaxed">{hobby.blurb}</p>
+          <div class={`reveal reveal-delay-${(i % 4) + 1} rounded-2xl p-7 md:p-9 ${hobby.color} transition-transform duration-200 hover:-translate-y-1 cursor-default`}>
+            <h3 class="font-display text-2xl md:text-3xl font-black mb-3">{hobby.name}</h3>
+            <p class="font-body text-sm md:text-base opacity-75 leading-relaxed mb-4">{hobby.blurb}</p>
+            {hobby.progress && (
+              <div>
+                <div class="flex justify-between items-baseline mb-1.5">
+                  <span class="font-body text-xs font-semibold opacity-90">{hobby.progress.current} of {hobby.progress.goal} books</span>
+                  <span class="font-body text-xs opacity-60">{Math.round((hobby.progress.current / hobby.progress.goal) * 100)}%</span>
+                </div>
+                <div class="h-1.5 bg-white/30 rounded-full overflow-hidden">
+                  <div class="h-full bg-white rounded-full" style={`width: ${(hobby.progress.current / hobby.progress.goal) * 100}%`}></div>
+                </div>
+              </div>
+            )}
+            {hobby.genres && (
+              <div class="flex flex-wrap gap-2 mt-4">
+                {hobby.genres.map((g: string) => (
+                  <span class="bg-white/20 text-white text-xs font-medium font-body px-3 py-1 rounded-full">{g}</span>
+                ))}
+              </div>
+            )}
           </div>
         )
       ))}
