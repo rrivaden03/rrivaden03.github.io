@@ -4,7 +4,7 @@ export const site = {
   location: 'Dundalk, Ireland',
 
   // Rotating subtitle in the hero — add/remove as you like
-  roles: ['Firmware Engineer', 'IoT Builder', 'Tennis Fanatic', 'Pixel Chaser'],
+  roles: ['Firmware Engineer', 'IoT Builder', 'Tennis Fanatic', 'Pixel Chaser', 'Venezuelan in Ireland'],
 
   social: {
     github: 'https://github.com/rrivaden03',
@@ -14,7 +14,7 @@ export const site = {
   },
 
   about: [
-    "Hi! I'm Romina, a Computer Engineer from Iowa State University, currently living in Dundalk, Ireland. I build firmware and IoT software for connected pet products at PetSafe Brands; smart feeders, GPS collars, automatic litterboxes — the kind of things your pet uses but definitely doesn't appreciate.",
+    "Hi! I'm Romina, originally from Venezuela and currently living in Dundalk, Ireland — a move that made more sense than expected. Turns out the Irish and Venezuelans are the same craic, just in different languages. I build firmware and IoT software for connected pet products at PetSafe Brands — smart feeders, GPS collars, automatic litterboxes — the kind of things your pet uses but definitely doesn't appreciate.",
     "When I'm not debugging firmware at odd hours, I'm chasing a better tennis backhand, hunting for the perfect shot to photograph, or lost somewhere in a good book or film.",
   ],
 
@@ -110,6 +110,8 @@ export const site = {
     'Will learn your dog\'s name before yours.',
     'Will re-grip your racket before you notice it needs it.',
     'Spotify Wrapped is always confused. So is everyone else.',
+    'Makes arepas from scratch. Will absolutely make you some.',
+    'Also technically learning German. Duolingo streak intact. Vocabulary: debatable.',
   ],
 
   now: {
