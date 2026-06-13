@@ -1,0 +1,87 @@
+---
+import { site } from '../data/content';
+
+const levelLabel = (v: number) => {
+  if (v >= 90) return 'Expert';
+  if (v >= 70) return 'Proficient';
+  if (v >= 50) return 'Intermediate';
+  return 'Learning';
+};
+---
+<section id="skills" class="py-24 md:py-32 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="reveal">
+      <h2 class="font-display text-4xl md:text-5xl font-black text-stone-900 mb-2">Skills</h2>
+      <span class="block h-1 w-14 bg-blue-900 rounded-full mb-12"></span>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20">
+
+      <!-- Technical -->
+      <div class="reveal reveal-delay-1">
+        <h3 class="font-display text-xs font-bold uppercase tracking-widest text-stone-400 mb-8">
+          Technical
+        </h3>
+        <div class="space-y-7" id="skill-bars">
+          {site.skills.technical.map(skill => (
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <span class="font-body text-sm font-semibold text-stone-800">{skill.name}</span>
+                <span class="font-body text-xs text-stone-400">{levelLabel(skill.level)}</span>
+              </div>
+              <div class="h-2 bg-stone-100 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-blue-900 rounded-full transition-[width] duration-1000 ease-out"
+                  style="width: 0%"
+                  data-fill={skill.level}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Soft skills -->
+      <div class="reveal reveal-delay-2">
+        <h3 class="font-display text-xs font-bold uppercase tracking-widest text-stone-400 mb-8">
+          Human
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          {site.skills.soft.map(s => (
+            <span class="bg-stone-100 hover:bg-lime-100 hover:text-lime-800 text-stone-700 px-5 py-2.5 rounded-full text-sm font-medium font-body transition-colors cursor-default">
+              {s}
+            </span>
+          ))}
+        </div>
+
+        <div class="mt-12 p-6 rounded-2xl bg-stone-50 border border-stone-100">
+          <p class="font-body text-sm text-stone-500 leading-relaxed italic">
+            "The most important skill is knowing when to ask for help — and when to just read the datasheet."
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const section = document.getElementById('skills');
+  if (section) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.querySelectorAll<HTMLElement>('[data-fill]').forEach(bar => {
+              bar.style.width = bar.dataset.fill + '%';
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(section);
+  }
+</script>

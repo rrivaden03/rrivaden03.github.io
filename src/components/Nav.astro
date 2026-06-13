@@ -1,0 +1,79 @@
+---
+const links = [
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Hobbies', href: '#hobbies' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+<header
+  id="nav"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="#" class="font-display text-xl font-black tracking-tight text-stone-900">
+      RR<span class="text-lime-400">.</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {links.map(l => (
+        <a
+          href={l.href}
+          class="text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors"
+        >
+          {l.label}
+        </a>
+      ))}
+    </nav>
+
+    <button
+      id="menu-btn"
+      class="md:hidden flex flex-col gap-1.5 p-1"
+      aria-label="Toggle menu"
+    >
+      <span class="block w-6 h-0.5 bg-stone-700 transition-all" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-stone-700 transition-all" id="bar2"></span>
+      <span class="block w-4 h-0.5 bg-stone-700 transition-all" id="bar3"></span>
+    </button>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white border-t border-stone-100 px-6 py-4"
+  >
+    <div class="flex flex-col gap-4">
+      {links.map(l => (
+        <a
+          href={l.href}
+          class="mobile-nav-link text-sm font-medium text-stone-600 hover:text-orange-500 transition-colors"
+        >
+          {l.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('nav')!;
+  const btn = document.getElementById('menu-btn')!;
+  const menu = document.getElementById('mobile-menu')!;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      nav.classList.add('bg-white/90', 'backdrop-blur-sm', 'shadow-sm');
+    } else {
+      nav.classList.remove('bg-white/90', 'backdrop-blur-sm', 'shadow-sm');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => menu.classList.add('hidden'));
+  });
+</script>

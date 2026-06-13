@@ -1,0 +1,48 @@
+---
+import { site } from '../data/content';
+---
+<section id="about" class="py-24 md:py-32 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- Text -->
+    <div class="reveal">
+      <h2 class="font-display text-4xl md:text-5xl font-black text-stone-900 mb-2">About Me</h2>
+      <span class="block h-1 w-14 bg-blue-900 rounded-full mb-8"></span>
+
+      <div class="space-y-4 text-stone-600 leading-relaxed text-base md:text-lg">
+        {site.about.map(p => <p>{p}</p>)}
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-2">
+        <span class="bg-blue-50 text-blue-900 px-4 py-1.5 rounded-full text-sm font-medium font-body">
+          ISU Computer Engineering
+        </span>
+        <span class="bg-stone-100 text-stone-700 px-4 py-1.5 rounded-full text-sm font-medium font-body">
+          Based in Ireland
+        </span>
+        <span class="bg-lime-100 text-lime-700 px-4 py-1.5 rounded-full text-sm font-medium font-body">
+          IoT & Firmware
+        </span>
+        <span class="bg-sky-100 text-sky-700 px-4 py-1.5 rounded-full text-sm font-medium font-body">
+          AWS Cloud
+        </span>
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <div class="reveal reveal-delay-2 flex justify-center md:justify-end">
+      <div class="relative">
+        <!-- Offset decorative square -->
+        <div class="absolute -bottom-4 -right-4 w-full h-full rounded-2xl bg-blue-50"></div>
+        <div class="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden bg-stone-200 shadow-lg">
+          <img
+            src="/profile.jpg"
+            alt="Romina Rivadeneira"
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
