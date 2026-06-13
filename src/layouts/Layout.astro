@@ -11,6 +11,7 @@ const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Romina Rivadeneira — Firmware Engineer, IoT Builder, Tennis Fanatic. Venezuelan in Ireland building IoT products at PetSafe Brands." />
+    <link rel="preload" as="image" href="/profile.jpg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={siteUrl.href} />
@@ -30,6 +31,20 @@ const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
     <meta name="twitter:title" content="Romina Rivadeneira — Firmware Engineer" />
     <meta name="twitter:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
     <meta name="twitter:image" content={new URL('/og.jpg', siteUrl).href} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Romina Rivadeneira",
+      "url": siteUrl.href,
+      "jobTitle": "Firmware & IoT Software Engineer",
+      "worksFor": { "@type": "Organization", "name": "PetSafe Brands" },
+      "sameAs": [
+        "https://github.com/rrivaden03",
+        "https://www.linkedin.com/in/rrivaden/",
+        "https://x.com/RomiRiv"
+      ]
+    })} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

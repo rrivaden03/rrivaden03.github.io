@@ -21,7 +21,7 @@ import { site } from '../data/content';
           >
             <img
               src={hobby.image}
-              alt={hobby.name}
+              alt={hobby.alt ?? hobby.name}
               loading="lazy"
               decoding="async"
               style={`--s: ${hobby.scale ?? 1}; object-position: ${hobby.objectPos ?? 'center'}; transform-origin: ${hobby.objectPos ?? 'center'}`}
