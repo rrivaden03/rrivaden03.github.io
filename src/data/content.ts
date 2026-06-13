@@ -14,16 +14,16 @@ export const site = {
   },
 
   about: [
-    "Hi! I'm Romina, a Computer Engineer from Iowa State University. I develop firmware and software solutions as part of the IoT team at PetSafe Brands in Dundalk, Ireland. In case you're curious — PetSafe is a pet technology company, not as much about radios as the name suggests.",
+    "Hi! I'm Romina, a Computer Engineer from Iowa State University, currently living in Dundalk, Ireland. I build firmware and IoT software for connected pet products at PetSafe Brands; smart feeders, GPS collars, automatic litterboxes — the kind of things your pet uses but definitely doesn't appreciate.",
     "When I'm not debugging firmware at odd hours, I'm chasing a better tennis backhand, hunting for the perfect shot to photograph, or lost somewhere in a good book or film.",
   ],
 
   skills: {
     technical: [
-      { name: 'Embedded C + FreeRTOS', level: 90 },
-      { name: 'AWS IoT', level: 90 },
-      { name: 'Mobile Development', level: 70 },
-      { name: 'Web Development', level: 60 },
+      { name: 'Embedded Firmware', level: 90 },
+      { name: 'Cloud & IoT', level: 85 },
+      { name: 'Scripting & Tooling', level: 60 },
+      { name: 'Web Development', level: 50 },
     ],
     hardware: [
       'Espressif (ESP32)',
