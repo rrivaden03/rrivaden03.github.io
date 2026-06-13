@@ -3,5 +3,5 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://rrivaden03.github.io',
+  site: 'https://rominarivadeneira.com',
 });
