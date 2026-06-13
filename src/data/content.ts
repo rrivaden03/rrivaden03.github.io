@@ -71,33 +71,6 @@ export const site = {
     },
   ],
 
-  projects: [
-    {
-      name: 'Connected Pet Products',
-      folder: 'proj-1',
-      description: 'IoT-enabled pet devices developed at PetSafe — connecting hardware to the cloud.',
-      tags: ['IoT', 'Embedded C', 'AWS'],
-    },
-    {
-      name: 'Miniature Greenhouses',
-      folder: 'proj-2',
-      description: 'Automated environmental control systems for miniature greenhouse units.',
-      tags: ['Hardware', 'Sensors', 'Automation'],
-    },
-    {
-      name: 'Bike-Share',
-      folder: 'proj-3',
-      description: 'A bike-sharing data platform and analysis project.',
-      tags: ['Web', 'Data Analysis'],
-    },
-    {
-      name: 'Aptus',
-      folder: 'proj-4',
-      description: 'Mobile application project.',
-      tags: ['Mobile'],
-    },
-  ],
-
   hobbies: [
     { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Working on that serve.', image: '/tennis.jpg' },
     { name: 'Photography', color: 'bg-orange-400 text-stone-900', blurb: 'Finding the perfect shot.' },
