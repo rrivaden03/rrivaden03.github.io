@@ -66,7 +66,7 @@ export const site = {
       school: 'Iowa State University',
       degree: 'B.S. Computer Engineering',
       location: 'Ames, IA',
-      period: '20XX — 20XX', // TODO: add your dates
+      period: '2013 — 2017',
       bullets: ['Computer Engineering graduate — Go Cyclones!'],
     },
   ],
