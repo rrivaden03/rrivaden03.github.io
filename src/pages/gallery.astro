@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../data/content';
+---
+<Layout title="Photography — Romina Rivadeneira">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/60">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="/" class="font-display font-black text-lg text-stone-900 tracking-tight">
+        RR<span class="text-lime-500">.</span>
+      </a>
+      <a href="/" class="font-body text-sm text-stone-500 hover:text-stone-900 transition-colors flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back
+      </a>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-24 px-6 bg-stone-50 min-h-screen">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="mb-12">
+        <h1 class="font-display text-4xl md:text-5xl font-black text-stone-900 mb-2">Through the Lens</h1>
+        <span class="block h-1 w-14 bg-lime-400 rounded-full mb-4"></span>
+        <p class="font-body text-stone-500 text-base max-w-lg">
+          Christmas markets, grass courts, coastal sunsets, and dogs that didn't ask to be famous. Germany mostly, Ireland always, Austria whenever possible.
+        </p>
+      </div>
+
+      <!-- Masonry grid -->
+      <div class="masonry">
+        {site.gallery.map((photo, i) => (
+          <div
+            class="masonry-item group cursor-zoom-in"
+            data-index={i}
+          >
+            <div class="relative rounded-xl overflow-hidden bg-stone-200">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <div class="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/20 transition-colors duration-300 rounded-xl"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <span class="font-body text-xs font-semibold text-white bg-stone-900/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                  {photo.caption}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-stone-950/95 backdrop-blur-sm hidden items-center justify-center p-4 md:p-8">
+    <button id="lb-close" aria-label="Close" class="absolute top-5 right-5 text-white/60 hover:text-white transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <button id="lb-prev" aria-label="Previous" class="absolute left-4 md:left-6 text-white/60 hover:text-white transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="flex flex-col items-center gap-4 max-w-5xl w-full">
+      <img id="lb-img" src="" alt="" class="max-h-[80vh] w-auto max-w-full rounded-lg object-contain shadow-2xl" />
+      <p id="lb-caption" class="font-body text-sm text-stone-400"></p>
+    </div>
+    <button id="lb-next" aria-label="Next" class="absolute right-4 md:right-6 text-white/60 hover:text-white transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+</Layout>
+
+<style>
+  .masonry {
+    columns: 1;
+    column-gap: 1rem;
+  }
+  @media (min-width: 640px) {
+    .masonry { columns: 2; }
+  }
+  @media (min-width: 1024px) {
+    .masonry { columns: 3; }
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  #lightbox.open {
+    display: flex;
+  }
+</style>
+
+<script define:vars={{ photos: site.gallery }}>
+  const lb      = document.getElementById('lightbox');
+  const lbImg   = document.getElementById('lb-img');
+  const lbCap   = document.getElementById('lb-caption');
+  const lbClose = document.getElementById('lb-close');
+  const lbPrev  = document.getElementById('lb-prev');
+  const lbNext  = document.getElementById('lb-next');
+  let current   = 0;
+
+  function open(i) {
+    current = i;
+    lbImg.src     = photos[i].src;
+    lbImg.alt     = photos[i].alt;
+    lbCap.textContent = photos[i].caption;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  function step(dir) {
+    open((current + dir + photos.length) % photos.length);
+  }
+
+  document.querySelectorAll('.masonry-item').forEach(el => {
+    el.addEventListener('click', () => open(Number(el.dataset.index)));
+  });
+
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', () => step(-1));
+  lbNext.addEventListener('click', () => step(1));
+
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')      close();
+    if (e.key === 'ArrowLeft')   step(-1);
+    if (e.key === 'ArrowRight')  step(1);
+  });
+</script>
