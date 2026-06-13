@@ -1,7 +1,7 @@
 export const site = {
   name: 'Romina Rivadeneira',
   email: 'rivrom18@gmail.com',
-  location: 'Dublin, Ireland',
+  location: 'Dundalk, Ireland',
 
   // Rotating subtitle in the hero — add/remove as you like
   roles: ['Firmware Engineer', 'IoT Builder', 'Tennis Fanatic', 'Pixel Chaser'],
@@ -25,6 +25,16 @@ export const site = {
       { name: 'Mobile Development', level: 70 },
       { name: 'Web Development', level: 60 },
     ],
+    hardware: [
+      'Espressif (ESP32)',
+      'Nordic Semiconductor',
+      'NXP (Marvell)',
+      'Infineon (Cypress)',
+      'Wi-Fi + BLE',
+      'OTA Firmware Updates',
+      'MQTT',
+      'Amazon FreeRTOS',
+    ],
     soft: [
       'Self-Motivation',
       'Communication & Empathy',
@@ -35,21 +45,23 @@ export const site = {
 
   experience: [
     {
-      company: 'Radio Systems PetSafe Europe',
+      company: 'PetSafe Brands (formerly Radio Systems PetSafe Europe)',
       role: 'Firmware & IoT Software Engineer',
       location: 'Dundalk, Ireland',
       period: '2020 — Present',
       current: true,
       bullets: [
-        'Developing firmware and embedded software for connected pet products',
-        'Building and maintaining IoT cloud integrations on AWS',
-        'Working across the full stack from bare-metal C to mobile app connectivity',
+        'Develop firmware for IoT pet products — smart feeders, automatic litterboxes, and GPS containment systems',
+        'Architect a shared embedded platform covering product onboarding, cloud communication protocols, and OTA firmware updates',
+        'Work across Espressif, Nordic, NXP (Marvell), and Infineon (Cypress) Wi-Fi and BLE modules using C + FreeRTOS on AWS IoT',
+        'Own embedded components through full development, launch, and sustaining phases across cross-functional teams',
+        'Support customer service and QA teams during product deployment and operation',
       ],
-      tags: ['C', 'FreeRTOS', 'AWS IoT', 'Embedded'],
+      tags: ['C', 'FreeRTOS', 'AWS IoT', 'BLE', 'Wi-Fi', 'OTA', 'Espressif', 'Nordic'],
     },
     {
-      company: 'Radio Systems Corporation (PetSafe)',
-      role: 'Software Engineer',
+      company: 'PetSafe Brands (formerly Radio Systems Corporation)',
+      role: 'Firmware & IoT Software Engineer',
       location: 'Knoxville, TN, USA',
       period: '2017 — 2020',
       current: false,
@@ -66,7 +78,7 @@ export const site = {
       school: 'Iowa State University',
       degree: 'B.S. Computer Engineering',
       location: 'Ames, IA',
-      period: '2013 — 2017',
+      period: '2017',
       bullets: ['Computer Engineering graduate — Go Cyclones!'],
     },
   ],

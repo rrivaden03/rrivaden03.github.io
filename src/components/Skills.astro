@@ -40,6 +40,19 @@ const levelLabel = (v: number) => {
             </div>
           ))}
         </div>
+
+        <div class="mt-10 pt-8 border-t border-stone-100">
+          <h3 class="font-display text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">
+            Hardware & Tooling
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            {site.skills.hardware.map(h => (
+              <span class="bg-blue-50 text-blue-900 text-xs font-medium font-body px-3 py-1.5 rounded-full">
+                {h}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
       <!-- Soft skills -->
