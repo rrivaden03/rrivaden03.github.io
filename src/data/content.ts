@@ -14,7 +14,7 @@ export const site = {
   },
 
   about: [
-    "Hi! I'm Romina, a Computer Engineer from Iowa State University. I develop firmware and software solutions as part of the IoT team at Radio Systems PetSafe Europe in Dublin, Ireland. In case you're curious — PetSafe is a pet technology company, not as much about radios as the name suggests.",
+    "Hi! I'm Romina, a Computer Engineer from Iowa State University. I develop firmware and software solutions as part of the IoT team at PetSafe Brands in Dundalk, Ireland. In case you're curious — PetSafe is a pet technology company, not as much about radios as the name suggests.",
     "When I'm not debugging firmware at odd hours, I'm chasing a better tennis backhand, hunting for the perfect shot to photograph, or lost somewhere in a good book or film.",
   ],
 
@@ -101,6 +101,12 @@ export const site = {
     { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Never enough pages.' },
     { name: 'Film', color: 'bg-rose-400 text-white', blurb: 'Always hunting a good plot twist.' },
     { name: 'Sushi', color: 'bg-yellow-300 text-stone-900', blurb: 'A deep and important passion.' },
+  ],
+
+  personalFacts: [
+    'Will learn your dog\'s name before yours.',
+    'Will re-grip your racket before you notice it needs it.',
+    'Spotify Wrapped is always confused. So is everyone else.',
   ],
 
   now: {

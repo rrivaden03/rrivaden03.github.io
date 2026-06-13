@@ -31,7 +31,7 @@ import { site } from '../data/content';
         <div class="absolute left-4 top-2 bottom-0 w-px bg-stone-200"></div>
 
         {site.experience.map((job, i) => (
-          <div class={`relative pl-14 ${i < site.experience.length - 1 ? 'pb-14' : ''}`}>
+          <div class={`relative pl-10 sm:pl-14 ${i < site.experience.length - 1 ? 'pb-14' : ''}`}>
             <!-- Timeline dot -->
             <div class={`absolute left-0 top-1 w-8 h-8 rounded-full flex items-center justify-center shadow-sm border-4 border-stone-50 ${job.current ? 'bg-blue-900' : 'bg-stone-300'}`}></div>
 
@@ -52,8 +52,8 @@ import { site } from '../data/content';
 
               <ul class="space-y-1.5 mb-4">
                 {job.bullets.map(b => (
-                  <li class="font-body text-sm text-stone-600 flex gap-2">
-                    <span class="text-blue-300 mt-1 shrink-0">›</span>
+                  <li class="font-body text-sm text-stone-600 flex gap-2 items-baseline">
+                    <span class="text-blue-300 shrink-0">›</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -82,7 +82,7 @@ import { site } from '../data/content';
         <div class="absolute left-4 top-2 bottom-0 w-px bg-stone-200"></div>
 
         {site.education.map(edu => (
-          <div class="relative pl-14">
+          <div class="relative pl-10 sm:pl-14">
             <div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-lime-400 flex items-center justify-center shadow-sm border-4 border-stone-50"></div>
 
             <div class="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
@@ -91,8 +91,8 @@ import { site } from '../data/content';
               <p class="font-body text-stone-400 text-xs mb-4">{edu.location} · {edu.period}</p>
               <ul class="space-y-1.5">
                 {edu.bullets.map(b => (
-                  <li class="font-body text-sm text-stone-600 flex gap-2">
-                    <span class="text-lime-400 mt-1 shrink-0">›</span>
+                  <li class="font-body text-sm text-stone-600 flex gap-2 items-baseline">
+                    <span class="text-lime-400 shrink-0">›</span>
                     <span>{b}</span>
                   </li>
                 ))}

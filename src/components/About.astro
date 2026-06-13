@@ -30,17 +30,29 @@ import { site } from '../data/content';
     </div>
 
     <!-- Photo -->
-    <div class="reveal reveal-delay-2 flex justify-center md:justify-end">
+    <div class="reveal reveal-delay-2 flex flex-col items-center md:items-end gap-6">
       <div class="relative">
-        <!-- Offset decorative square -->
-        <div class="absolute -bottom-4 -right-4 w-full h-full rounded-2xl bg-blue-50"></div>
-        <div class="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden bg-stone-200 shadow-lg">
+        <!-- Offset decorative circle -->
+        <div class="absolute -bottom-3 -right-3 w-full h-full rounded-full bg-blue-100"></div>
+        <!-- Navy ring -->
+        <div class="absolute inset-0 rounded-full ring-4 ring-blue-900/10 z-10 pointer-events-none"></div>
+        <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden bg-stone-200 shadow-xl">
           <img
             src="/profile.jpg"
             alt="Romina Rivadeneira"
-            class="w-full h-full object-cover object-top"
+            class="w-full h-full object-cover object-[50%_20%]"
           />
         </div>
+      </div>
+
+      <!-- Personal facts card -->
+      <div class="w-64 sm:w-72 md:w-80 bg-stone-50 border border-stone-200 rounded-2xl px-5 py-4 space-y-2.5">
+        {site.personalFacts.map(fact => (
+          <p class="font-body text-sm text-stone-600 flex gap-2.5 items-start">
+            <span class="text-lime-500 font-bold shrink-0 mt-px">—</span>
+            <span>{fact}</span>
+          </p>
+        ))}
       </div>
     </div>
 
