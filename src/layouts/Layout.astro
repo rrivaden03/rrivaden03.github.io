@@ -1,8 +1,14 @@
 ---
 interface Props {
   title?: string;
+  description?: string;
+  ogImage?: string;
 }
-const { title = 'Romina Rivadeneira' } = Astro.props;
+const {
+  title = 'Romina Rivadeneira',
+  description = 'Romina Rivadeneira — Firmware Engineer, IoT Builder, Tennis Fanatic. Venezuelan in Ireland building IoT products at PetSafe Brands.',
+  ogImage = '/og.jpg',
+} = Astro.props;
 const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
 ---
 <!DOCTYPE html>
@@ -10,27 +16,27 @@ const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Romina Rivadeneira — Firmware Engineer, IoT Builder, Tennis Fanatic. Venezuelan in Ireland building IoT products at PetSafe Brands." />
+    <meta name="description" content={description} />
     <link rel="preload" as="image" href="/profile.jpg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="canonical" href={siteUrl.href} />
+    <link rel="canonical" href={Astro.url.href} />
     <meta name="theme-color" content="#1e3a8a" />
     <title>{title}</title>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl.href} />
+    <meta property="og:url" content={Astro.url.href} />
     <meta property="og:title" content="Romina Rivadeneira — Firmware Engineer" />
     <meta property="og:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
-    <meta property="og:image" content={new URL('/og.jpg', siteUrl).href} />
+    <meta property="og:image" content={new URL(ogImage, siteUrl).href} />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@RomiRiv" />
     <meta name="twitter:title" content="Romina Rivadeneira — Firmware Engineer" />
     <meta name="twitter:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
-    <meta name="twitter:image" content={new URL('/og.jpg', siteUrl).href} />
+    <meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
