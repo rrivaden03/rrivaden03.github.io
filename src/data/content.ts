@@ -9,7 +9,7 @@ export const site = {
   social: {
     github: 'https://github.com/rrivaden03',
     linkedin: 'https://www.linkedin.com/in/rrivaden/',
-    twitter: 'https://twitter.com/RomiRiv',
+    twitter: 'https://x.com/RomiRiv',
     twitch: 'https://www.twitch.tv/rrivaden03',
   },
 

@@ -3,7 +3,7 @@ interface Props {
   title?: string;
 }
 const { title = 'Romina Rivadeneira' } = Astro.props;
-const siteUrl = Astro.site ?? new URL('https://rrivaden03.github.io');
+const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,7 @@ const siteUrl = Astro.site ?? new URL('https://rrivaden03.github.io');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Romina Rivadeneira — Firmware Engineer, IoT Builder, Tennis Fanatic. Venezuelan in Ireland building IoT products at PetSafe Brands." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={siteUrl.href} />
     <meta name="theme-color" content="#1e3a8a" />
     <title>{title}</title>
