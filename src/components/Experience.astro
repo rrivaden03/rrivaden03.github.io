@@ -55,8 +55,14 @@ import { site } from '../data/content';
               </ul>
 
               <div class="flex flex-wrap gap-2">
-                {job.tags.map(tag => (
+                {job.tags.hw.map(tag => (
+                  <span class="bg-blue-50 text-blue-900 text-xs px-3 py-1 rounded-full font-body">{tag}</span>
+                ))}
+                {job.tags.sw.map(tag => (
                   <span class="bg-stone-100 text-stone-600 text-xs px-3 py-1 rounded-full font-body">{tag}</span>
+                ))}
+                {job.tags.proto.map(tag => (
+                  <span class="bg-sky-50 text-sky-700 text-xs px-3 py-1 rounded-full font-body">{tag}</span>
                 ))}
               </div>
             </div>

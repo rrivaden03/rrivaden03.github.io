@@ -30,6 +30,7 @@ export const site = {
       'Nordic Semiconductor',
       'NXP (Marvell)',
       'Infineon (Cypress)',
+      'Silicon Labs (SiLabs)',
       'Wi-Fi + BLE',
       'OTA Firmware Updates',
       'MQTT',
@@ -53,11 +54,15 @@ export const site = {
       bullets: [
         'Develop firmware for IoT pet products — smart feeders, automatic litterboxes, and GPS containment systems',
         'Architect a shared embedded platform covering product onboarding, cloud communication protocols, and OTA firmware updates',
-        'Work across Espressif, Nordic, NXP (Marvell), and Infineon (Cypress) Wi-Fi and BLE modules using C + FreeRTOS on AWS IoT',
+        'Work across Espressif, Nordic, NXP (Marvell), Infineon (Cypress), and Silicon Labs Wi-Fi and BLE modules using C + FreeRTOS on AWS IoT',
         'Own embedded components through full development, launch, and sustaining phases across cross-functional teams',
         'Support customer service and QA teams during product deployment and operation',
       ],
-      tags: ['C', 'FreeRTOS', 'AWS IoT', 'BLE', 'Wi-Fi', 'OTA', 'Espressif', 'Nordic'],
+      tags: {
+        hw:    ['Espressif', 'Nordic', 'NXP (Marvell)', 'Infineon (Cypress)', 'Silicon Labs'],
+        sw:    ['C', 'FreeRTOS', 'AWS IoT'],
+        proto: ['BLE', 'Wi-Fi', 'OTA'],
+      },
     },
     {
       company: 'PetSafe Brands (formerly Radio Systems Corporation)',
@@ -66,10 +71,15 @@ export const site = {
       period: '2017 — 2020',
       current: false,
       bullets: [
-        'Contributed to firmware and software for pet technology products',
-        'Worked on IoT-connected device platforms and cloud services',
+        'Contributed to firmware development for IoT pet products using C + FreeRTOS on Wi-Fi and BLE microcontrollers',
+        'Built experience across Espressif, NXP (Marvell), and Cypress modules — building the embedded foundations that carried into the European role',
+        'Supported product launches and sustaining phases as part of the embedded sub-team within the connected team',
       ],
-      tags: ['C', 'IoT', 'Embedded'],
+      tags: {
+        hw:    ['Espressif', 'NXP (Marvell)', 'Cypress'],
+        sw:    ['C', 'FreeRTOS', 'AWS IoT'],
+        proto: ['BLE', 'Wi-Fi'],
+      },
     },
   ],
 
