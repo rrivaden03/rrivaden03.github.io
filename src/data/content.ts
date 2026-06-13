@@ -110,8 +110,8 @@ export const site = {
     'Will learn your dog\'s name before yours.',
     'Will re-grip your racket before you notice it needs it.',
     'Spotify Wrapped is always confused. So is everyone else.',
-    'Makes arepas from scratch. Will absolutely make you some.',
-    'Also technically learning German. Duolingo streak intact. Vocabulary: debatable.',
+    'Will make you arepas. This is not an offer made lightly.',
+    'Berlin four times, with Germany and Austria well covered. Tries German everywhere. The locals are very gracious about it.',
   ],
 
   now: {
