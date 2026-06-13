@@ -51,6 +51,7 @@ export const site = {
       location: 'Dundalk, Ireland',
       period: '2020 — Present',
       current: true,
+      tenureNote: '8+ yrs · same company',
       bullets: [
         'Develop firmware for IoT pet products — smart feeders, automatic litterboxes, and GPS containment systems',
         'Architect a shared embedded platform covering product onboarding, cloud communication protocols, and OTA firmware updates',

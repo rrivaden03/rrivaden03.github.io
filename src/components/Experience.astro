@@ -38,9 +38,14 @@ import { site } from '../data/content';
             <div class="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
                 <h3 class="font-display text-lg font-bold text-stone-900">{job.company}</h3>
-                {job.current && (
-                  <span class="bg-lime-100 text-lime-700 text-xs font-semibold px-3 py-1 rounded-full">Current</span>
-                )}
+                <div class="flex gap-2 flex-wrap">
+                  {job.current && (
+                    <span class="bg-lime-100 text-lime-700 text-xs font-semibold px-3 py-1 rounded-full">Current</span>
+                  )}
+                  {job.tenureNote && (
+                    <span class="bg-stone-100 text-stone-500 text-xs font-medium px-3 py-1 rounded-full">{job.tenureNote}</span>
+                  )}
+                </div>
               </div>
               <p class="font-body text-blue-800 text-sm font-semibold mb-1">{job.role}</p>
               <p class="font-body text-stone-400 text-xs mb-4">{job.location} · {job.period}</p>
