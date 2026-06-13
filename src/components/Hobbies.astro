@@ -12,7 +12,7 @@ import { site } from '../data/content';
       </p>
     </div>
 
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {site.hobbies.map((hobby, i) => (
         hobby.image ? (
           /* Photo card */
@@ -22,7 +22,7 @@ import { site } from '../data/content';
             <img
               src={hobby.image}
               alt={hobby.name}
-              style={`object-position: ${hobby.objectPos ?? 'center'}; transform: scale(${hobby.scale ?? 1})`}
+              style={`object-position: ${hobby.objectPos ?? 'center'}; transform-origin: ${hobby.objectPos ?? 'center'}; transform: scale(${hobby.scale ?? 1})`}
               class="absolute inset-0 w-full h-full object-cover transition-[transform] duration-500 group-hover:scale-110"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-stone-900/30 to-transparent"></div>
