@@ -3,6 +3,7 @@ interface Props {
   title?: string;
 }
 const { title = 'Romina Rivadeneira' } = Astro.props;
+const siteUrl = Astro.site ?? new URL('https://rrivaden03.github.io');
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,17 +16,17 @@ const { title = 'Romina Rivadeneira' } = Astro.props;
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rrivaden03-github-io.vercel.app/" />
+    <meta property="og:url" content={siteUrl.href} />
     <meta property="og:title" content="Romina Rivadeneira — Firmware Engineer" />
     <meta property="og:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
-    <meta property="og:image" content="https://rrivaden03-github-io.vercel.app/profile.jpg" />
+    <meta property="og:image" content={new URL('/profile.jpg', siteUrl).href} />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@RomiRiv" />
     <meta name="twitter:title" content="Romina Rivadeneira — Firmware Engineer" />
     <meta name="twitter:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
-    <meta name="twitter:image" content="https://rrivaden03-github-io.vercel.app/profile.jpg" />
+    <meta name="twitter:image" content={new URL('/profile.jpg', siteUrl).href} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
