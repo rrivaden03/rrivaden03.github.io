@@ -31,12 +31,6 @@ const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
     <meta property="og:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
     <meta property="og:image" content={new URL(ogImage, siteUrl).href} />
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@RomiRiv" />
-    <meta name="twitter:title" content="Romina Rivadeneira — Firmware Engineer" />
-    <meta name="twitter:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
-    <meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
@@ -46,8 +40,7 @@ const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
       "worksFor": { "@type": "Organization", "name": "PetSafe Brands" },
       "sameAs": [
         "https://github.com/rrivaden03",
-        "https://www.linkedin.com/in/rrivaden/",
-        "https://x.com/RomiRiv"
+        "https://www.linkedin.com/in/rrivaden/"
       ]
     })} />
 

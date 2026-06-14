@@ -9,8 +9,6 @@ export const site = {
   social: {
     github: 'https://github.com/rrivaden03',
     linkedin: 'https://www.linkedin.com/in/rrivaden/',
-    twitter: 'https://x.com/RomiRiv',
-    twitch: 'https://www.twitch.tv/rrivaden03',
   },
 
   about: [
@@ -134,6 +132,7 @@ export const site = {
     { src: '/gallery/stuttgart-spring-festival.jpg', alt: 'Wellenflug swing carousel in full spin at the Stuttgart Spring Festival, two people watching from below', caption: 'Stuttgarter Frühlingsfest, Stuttgart', portrait: true,  width: 1350, height: 1800 },
     { src: '/gallery/berlin-staatsoper-dog.jpg',     alt: 'A completely unbothered dog lounging on the red carpet outside the Staatsoper für alle at Bebelplatz during the Fête de la Musique in Berlin', caption: 'Staatsoper für alle, Berlin', portrait: false, width: 1800, height: 1350 },
     { src: '/gallery/german-town-vineyards.jpg',     alt: 'Panoramic view over Esslingen am Neckar old town, with terraced vineyards in the foreground and wooded hills behind', caption: 'Esslingen am Neckar, Germany', portrait: false, width: 1800, height: 1350 },
+    { src: '/gallery/clogherhead-beach.jpg',         alt: 'A dog silhouetted on the vast wet sands of Clogherhead Beach at dawn, standing alone against a soft pink and blue sunrise sky, reflection shimmering in the low tide below', caption: 'Clogherhead, Ireland', portrait: false, width: 1800, height: 1350 },
   ],
 
   now: {
