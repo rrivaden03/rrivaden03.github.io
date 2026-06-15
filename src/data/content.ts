@@ -12,7 +12,7 @@ export const site = {
   },
 
   about: [
-    "Hi! I'm Romina, originally from Venezuela and currently living in Dundalk, Ireland — a move that made more sense than expected. Turns out the Irish and Venezuelans are the same craic, just in different languages. I build firmware and IoT software for connected pet products at PetSafe Brands — smart feeders, GPS collars, automatic litterboxes — the kind of things your pet uses but definitely doesn't appreciate.",
+    "Hi! I'm Romina, originally from Venezuela. Left home for a Computer Engineering degree in Iowa — cold winters, good people — which turned out to be good practice. Currently living in Dundalk, Ireland, a move that made more sense than expected. Turns out the Irish and Venezuelans are the same craic, just in different languages. I build firmware and IoT software for connected pet products at PetSafe Brands — smart feeders, GPS collars, automatic litterboxes — the kind of things your pet uses but definitely doesn't appreciate.",
     "When I'm not debugging firmware at odd hours, I'm chasing a better tennis backhand, hunting for the perfect shot to photograph, or lost somewhere in a good book or film.",
   ],
 
@@ -93,7 +93,7 @@ export const site = {
   ],
 
   hobbies: [
-    { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Doubles champion. Serves still pending.', image: '/tennis-team.jpg', alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
+    { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Doubles champion. Serves still pending.', badge: '🏆 Doubles Champs', image: '/tennis-team.jpg', alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
     { name: 'Photography', color: 'bg-orange-400 text-stone-900', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: '/cliffs.jpg', alt: 'A crow perched at the Cliffs of Moher, Ireland', objectPos: 'center' },
     { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Dark, tense, mysterious, and somehow also hopeful.', progress: { current: 23, goal: 53 }, genres: ['Thriller', 'Sci-Fi', 'Romance', 'Historical Fiction', 'Non-Fiction'] },
     { name: '& Also', color: 'bg-stone-700 text-white', also: [
@@ -133,6 +133,16 @@ export const site = {
     { src: '/gallery/berlin-staatsoper-dog.jpg',     alt: 'A completely unbothered dog lounging on the red carpet outside the Staatsoper für alle at Bebelplatz during the Fête de la Musique in Berlin', caption: 'Staatsoper für alle, Berlin', portrait: false, width: 1800, height: 1350 },
     { src: '/gallery/german-town-vineyards.jpg',     alt: 'Panoramic view over Esslingen am Neckar old town, with terraced vineyards in the foreground and wooded hills behind', caption: 'Esslingen am Neckar, Germany', portrait: false, width: 1800, height: 1350 },
     { src: '/gallery/clogherhead-beach.jpg',         alt: 'A dog silhouetted on the vast wet sands of Clogherhead Beach at dawn, standing alone against a soft pink and blue sunrise sky, reflection shimmering in the low tide below', caption: 'Clogherhead, Ireland', portrait: false, width: 1800, height: 1350 },
+  ],
+
+  projects: [
+    {
+      name: 'Dundalk Tennis Club',
+      description: 'A full-stack site for the club I play for — events, news, memberships, and a headless CMS. Built alongside a fellow club player who happens to be an experienced web developer and has been patient enough to introduce me to every tool on that stack. What started as "how hard can it be" turned into a Next.js monorepo.',
+      stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Sanity CMS'],
+      url: 'https://dundalkltc.com',
+      status: 'Live',
+    },
   ],
 
   now: {
