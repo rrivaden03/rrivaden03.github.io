@@ -35,10 +35,8 @@ export const site = {
       'Amazon FreeRTOS',
     ],
     soft: [
-      'Self-Motivation',
-      'Communication & Empathy',
-      'Problem-Solving',
-      'Patience',
+      'Patience: firmware-grade. Intermittent bugs are not allowed to win.',
+      'Good at finding the gap — whether it\'s in the code, the system, or the team.',
     ],
   },
 
