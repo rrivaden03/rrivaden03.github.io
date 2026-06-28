@@ -88,6 +88,11 @@ import { site } from '../data/content';
                 ))}
               </div>
             )}
+            {hobby.name === 'Reading' && (
+              <a href={site.social.goodreads} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-5 font-body text-xs text-white/60 hover:text-white transition-colors">
+                Goodreads →
+              </a>
+            )}
           </div>
         )
       ))}
@@ -135,6 +140,9 @@ import { site } from '../data/content';
           <span class="inline-block mt-2 mb-2 bg-sky-400/20 text-sky-400 text-sm font-bold font-body px-3 py-1 rounded-full">{site.now.reading.genre}</span>
           <p class="font-body text-stone-400 text-sm">{site.now.reading.author}</p>
           <p class="font-body text-stone-300 text-sm mt-1 italic">{site.now.reading.take}</p>
+          <a href={site.social.goodreads} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-4 font-body text-xs text-stone-500 hover:text-stone-300 transition-colors">
+            Goodreads →
+          </a>
         </div>
 
         <div class="sm:px-8">
@@ -143,6 +151,9 @@ import { site } from '../data/content';
           <span class="inline-block mt-2 mb-2 bg-rose-400/20 text-rose-400 text-sm font-bold font-body px-3 py-1 rounded-full">{site.now.watching.genre}</span>
           <p class="font-body text-stone-400 text-sm">{site.now.watching.type}</p>
           <p class="font-body text-stone-300 text-sm mt-1 italic">{site.now.watching.take}</p>
+          <a href={site.social.letterboxd} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-4 font-body text-xs text-stone-500 hover:text-stone-300 transition-colors">
+            Letterboxd →
+          </a>
         </div>
 
         <div class="sm:pl-8">
@@ -150,6 +161,9 @@ import { site } from '../data/content';
           <p class="font-display font-bold text-white text-lg leading-snug">{site.now.tennis.status}</p>
           <span class="inline-block mt-2 mb-2 bg-lime-400/20 text-lime-400 text-sm font-bold font-body px-3 py-1 rounded-full">{site.now.tennis.record}</span>
           <p class="font-body text-stone-400 text-sm">{site.now.tennis.note}</p>
+          <a href={site.social.tennis} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-4 font-body text-xs text-stone-500 hover:text-stone-300 transition-colors">
+            Tennis Ireland →
+          </a>
         </div>
 
       </div>

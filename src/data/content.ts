@@ -9,6 +9,9 @@ export const site = {
   social: {
     github: 'https://github.com/rrivaden03',
     linkedin: 'https://www.linkedin.com/in/rrivaden/',
+    goodreads: 'https://www.goodreads.com/user/show/16351345-romina',
+    letterboxd: 'https://letterboxd.com/rrivaden03',
+    tennis: 'https://ti.tournamentsoftware.com/player-profile/daeb4542-3686-46b8-a29b-3734d1f89244',
   },
 
   about: [
@@ -158,7 +161,7 @@ export const site = {
 
   now: {
     reading: { title: 'The Anniversary', author: 'Alex Finlay', genre: 'Thriller', take: "Halfway in and already can't trust anyone." },
-    watching: { title: 'Backrooms', type: 'Film', genre: 'Horror', take: 'Went twice. Still thinking about it.' },
+    watching: { title: 'A League of Their Own', type: 'Film', genre: 'Sports Drama', take: 'Caught me on the first pitch. Four stars.' },
     tennis: { status: 'Glasnevin LTC Senior Tour 1000 Open 2026', record: '14W – 4L', note: 'Leinster Spring League Doubles Champions, May 2026' },
   },
 };
