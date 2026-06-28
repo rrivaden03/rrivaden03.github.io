@@ -68,4 +68,52 @@ import { site } from '../data/content';
     </div>
 
   </div>
+
+  <!-- Life journey -->
+  <div class="reveal max-w-6xl mx-auto mt-20 pt-12 border-t border-stone-100">
+    <p class="font-body text-sm text-stone-400 italic mb-10">{site.journey.tagline}</p>
+
+    <!-- Desktop horizontal timeline -->
+    <div class="hidden sm:grid grid-cols-4 relative">
+      <div class="absolute left-[12.5%] right-[12.5%] top-[18px] h-px bg-stone-200 z-0"></div>
+      {site.journey.stops.map(stop => (
+        <div class="relative flex flex-col items-center text-center px-4">
+          <div class={`relative z-10 w-9 h-9 rounded-full flex items-center justify-center text-base mb-4 border-2 ${stop.current ? 'bg-blue-900 border-blue-900 ring-4 ring-blue-100' : 'bg-white border-stone-200'}`}>
+            {stop.flag}
+          </div>
+          <div class="flex items-center justify-center gap-1.5 flex-wrap mb-0.5">
+            <p class="font-display font-bold text-stone-900 text-sm">{stop.city}</p>
+            {stop.home && <span class="font-body text-xs bg-stone-100 text-stone-500 px-2 py-0.5 rounded-full">home</span>}
+            {stop.current && <span class="font-body text-xs bg-lime-100 text-lime-700 px-2 py-0.5 rounded-full">now</span>}
+          </div>
+          <p class="font-body text-xs text-stone-400 mb-3">{stop.country}</p>
+          <p class="font-body text-xs text-stone-500 leading-relaxed">{stop.note}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Mobile vertical timeline -->
+    <div class="sm:hidden relative pl-8">
+      <div class="absolute left-[18px] top-0 bottom-0 w-px bg-stone-200"></div>
+      <div class="space-y-8">
+        {site.journey.stops.map(stop => (
+          <div class="relative flex gap-4">
+            <div class={`absolute -left-8 top-0.5 w-9 h-9 rounded-full flex items-center justify-center text-base shrink-0 border-2 ${stop.current ? 'bg-blue-900 border-blue-900 ring-4 ring-blue-100' : 'bg-white border-stone-200'}`}>
+              {stop.flag}
+            </div>
+            <div class="pl-4">
+              <div class="flex items-center gap-1.5 mb-0.5">
+                <p class="font-display font-bold text-stone-900 text-sm">{stop.city}</p>
+                {stop.home && <span class="font-body text-xs bg-stone-100 text-stone-500 px-2 py-0.5 rounded-full">home</span>}
+                {stop.current && <span class="font-body text-xs bg-lime-100 text-lime-700 px-2 py-0.5 rounded-full">now</span>}
+              </div>
+              <p class="font-body text-xs text-stone-400 mb-1">{stop.country}</p>
+              <p class="font-body text-xs text-stone-500 leading-relaxed">{stop.note}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
 </section>

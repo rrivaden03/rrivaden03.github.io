@@ -105,6 +105,16 @@ export const site = {
     ]},
   ],
 
+  journey: {
+    tagline: "Left home with two suitcases. This is where they've been.",
+    stops: [
+      { city: 'Valencia', country: 'Venezuela', flag: '🇻🇪', note: 'Home. The reference point for everywhere else.', home: true },
+      { city: 'Ames', country: 'Iowa, USA', flag: '🇺🇸', note: 'Cold winters, a Computer Engineering degree, and the first real taste of far from home.' },
+      { city: 'Knoxville', country: 'Tennessee, USA', flag: '🇺🇸', note: 'First job. First IoT product. The company liked it enough to bring me to Europe.' },
+      { city: 'Dundalk', country: 'Ireland', flag: '🇮🇪', note: "Didn't see this coming. Now it's home.", current: true },
+    ],
+  },
+
   personalFacts: [
     'Will learn your dog\'s name before yours.',
     'Will re-grip your racket before you notice it needs it.',
