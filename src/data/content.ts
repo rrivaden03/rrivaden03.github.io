@@ -18,10 +18,10 @@ export const site = {
 
   skills: {
     technical: [
-      { name: 'Embedded Firmware', level: 90 },
-      { name: 'Cloud & IoT', level: 85 },
-      { name: 'Scripting & Tooling', level: 60 },
-      { name: 'Web Development', level: 50 },
+      { name: 'Embedded Firmware', blurb: 'Eight years of C, FreeRTOS, and hardware that lies about its own behavior.' },
+      { name: 'Cloud & IoT', blurb: 'Connecting devices to the cloud and keeping them there. Daily work, not a side skill.' },
+      { name: 'Scripting & Tooling', blurb: 'Whatever makes the job less annoying. Usually works on the second try.' },
+      { name: 'Web Development', blurb: 'Not the day job, but it shows up. This site is evidence.' },
     ],
     hardware: [
       'Espressif (ESP32)',
@@ -37,23 +37,26 @@ export const site = {
     soft: [
       'Patience: firmware-grade. Intermittent bugs are not allowed to win.',
       'Good at finding the gap — whether it\'s in the code, the system, or the team.',
+      'Can explain BLE pairing to a product manager and a hardware engineer in the same breath. Both leave satisfied.',
     ],
   },
 
+  experienceIntro: "Eight years, two countries, same company. The problems kept changing — new chips, new protocols, new products — and the mission made it easy to stay. Building things that help pet parents feel safe and connected to their animals is the kind of work I would've called a dream job before I knew what a real job looked like. Turns out it was the first one I landed.",
+
   experience: [
     {
-      company: 'PetSafe Brands (formerly Radio Systems PetSafe Europe)',
+      company: 'Radio Systems PetSafe Europe Ltd (PetSafe Brands, but in Europe)',
       role: 'Firmware & IoT Software Engineer',
       location: 'Dundalk, Ireland',
       period: '2020 — Present',
       current: true,
       tenureNote: '8+ yrs · same company',
       bullets: [
-        'Develop firmware for IoT pet products — smart feeders, automatic litterboxes, and GPS containment systems',
-        'Architect a shared embedded platform covering product onboarding, cloud communication protocols, and OTA firmware updates',
-        'Work across Espressif, Nordic, NXP (Marvell), Infineon (Cypress), and Silicon Labs Wi-Fi and BLE modules using C + FreeRTOS on AWS IoT',
-        'Own embedded components through full development, launch, and sustaining phases across cross-functional teams',
-        'Support customer service and QA teams during product deployment and operation',
+        'Develop firmware for IoT pet products — smart feeders, automatic litterboxes, GPS trackers, and containment systems',
+        'Architect a shared embedded platform covering device provisioning, cloud communication, and OTA firmware updates',
+        'Work across Espressif, Nordic, NXP, Infineon, and Silicon Labs Wi-Fi and BLE modules in C + FreeRTOS on AWS IoT',
+        'Own components from first commit to launch — and everything that comes after',
+        'Work directly with customer service and QA when products ship — and when they don\'t behave',
       ],
       tags: {
         hw:    ['Espressif', 'Nordic', 'NXP (Marvell)', 'Infineon (Cypress)', 'Silicon Labs'],
@@ -68,9 +71,9 @@ export const site = {
       period: '2017 — 2020',
       current: false,
       bullets: [
-        'Contributed to firmware development for IoT pet products using C + FreeRTOS on Wi-Fi and BLE microcontrollers',
-        'Built experience across Espressif, NXP (Marvell), and Cypress modules — building the embedded foundations that carried into the European role',
-        'Supported product launches and sustaining phases as part of the embedded sub-team within the connected team',
+        'Built firmware for IoT pet products in C + FreeRTOS across Wi-Fi and BLE microcontrollers',
+        'Worked across Espressif, NXP, and Cypress modules — the embedded foundations that carried into the European role',
+        'Supported product launches and kept things running as part of the embedded team',
       ],
       tags: {
         hw:    ['Espressif', 'NXP (Marvell)', 'Cypress'],
@@ -93,12 +96,12 @@ export const site = {
   hobbies: [
     { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Doubles champion. Serves still pending.', badge: '🏆 Doubles Champs', image: '/tennis-team.jpg', alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
     { name: 'Photography', color: 'bg-orange-400 text-stone-900', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: '/cliffs.jpg', alt: 'A crow perched at the Cliffs of Moher, Ireland', objectPos: 'center' },
-    { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Dark, tense, mysterious, and somehow also hopeful.', progress: { current: 23, goal: 53 }, genres: ['Thriller', 'Sci-Fi', 'Romance', 'Historical Fiction', 'Non-Fiction'] },
+    { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Dark, tense, mysterious, and somehow also hopeful.', progress: { current: 25, goal: 53 }, genres: ['Thriller', 'Sci-Fi', 'Romance', 'Historical Fiction', 'Non-Fiction'] },
     { name: '& Also', color: 'bg-stone-700 text-white', also: [
       'On repeat today: Billy Talent, Rawayana, Bad Bunny, Gorillaz. The algorithm has trust issues.',
-      'Will draw it. Won\'t finish it.',
+      'The sketchbook is full of promising first pages.',
       'Sushi. Non-negotiable.',
-      'Video games. Occasionally. Competitively.',
+      'Games: online with friends, solo for the story. The backlog is not improving.',
     ]},
   ],
 
@@ -146,6 +149,6 @@ export const site = {
   now: {
     reading: { title: 'The Anniversary', author: 'Alex Finlay', genre: 'Thriller', take: "Halfway in and already can't trust anyone." },
     watching: { title: 'Backrooms', type: 'Film', genre: 'Horror', take: 'Went twice. Still thinking about it.' },
-    tennis: { status: 'Meath Senior Tour Graded Open 2026', record: '12W – 2L', note: 'Leinster Spring League Doubles Champions, May 2026' },
+    tennis: { status: 'Glasnevin LTC Senior Tour 1000 Open 2026', record: '14W – 4L', note: 'Leinster Spring League Doubles Champions, May 2026' },
   },
 };

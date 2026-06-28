@@ -1,18 +1,5 @@
 ---
 import { site } from '../data/content';
-
-const levelLabel = (v: number) => {
-  if (v >= 90) return 'Expert';
-  if (v >= 70) return 'Proficient';
-  if (v >= 50) return 'Intermediate';
-  return 'Learning';
-};
-
-const levelColor = (v: number) => {
-  if (v >= 90) return 'bg-lime-100 text-lime-800';
-  if (v >= 70) return 'bg-blue-50 text-blue-900';
-  return 'bg-stone-100 text-stone-600';
-};
 ---
 <section id="skills" class="py-24 md:py-32 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
@@ -33,9 +20,7 @@ const levelColor = (v: number) => {
           {site.skills.technical.map(skill => (
             <div class="bg-stone-50 border border-stone-100 rounded-2xl p-5 flex flex-col gap-3">
               <span class="font-display text-base font-bold text-stone-900 leading-snug">{skill.name}</span>
-              <span class={`font-body text-xs font-semibold px-3 py-1 rounded-full self-start ${levelColor(skill.level)}`}>
-                {levelLabel(skill.level)}
-              </span>
+              <p class="font-body text-xs text-stone-500 leading-relaxed">{skill.blurb}</p>
             </div>
           ))}
         </div>
