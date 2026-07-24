@@ -1,8 +1,4 @@
 export const site = {
-  name: 'Romina Rivadeneira',
-  email: 'rivrom18@gmail.com',
-  location: 'Dundalk, Ireland',
-
   // Rotating subtitle in the hero — add/remove as you like
   roles: ['Firmware Engineer', 'IoT Builder', 'Tennis Fanatic', 'Pixel Chaser', 'Venezuelan in Ireland'],
 
@@ -86,19 +82,9 @@ export const site = {
     },
   ],
 
-  education: [
-    {
-      school: 'Iowa State University',
-      degree: 'B.S. Computer Engineering',
-      location: 'Ames, IA',
-      period: '2017',
-      bullets: ['Computer Engineering graduate — Go Cyclones!'],
-    },
-  ],
-
   hobbies: [
-    { name: 'Tennis', color: 'bg-lime-400 text-stone-900', blurb: 'Doubles champion. Serves still pending.', badge: '🏆 Doubles Champs', image: '/tennis-team.jpg', alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
-    { name: 'Photography', color: 'bg-orange-400 text-stone-900', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: '/cliffs.jpg', alt: 'A crow perched at the Cliffs of Moher, Ireland', objectPos: 'center' },
+    { name: 'Tennis', blurb: 'Doubles champion. Serves still pending.', badge: '🏆 Doubles Champs', image: '/tennis-team.jpg', alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
+    { name: 'Photography', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: '/cliffs.jpg', alt: 'A crow perched at the Cliffs of Moher, Ireland', objectPos: 'center' },
     { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Dark, tense, mysterious, and somehow also hopeful.', progress: { current: 25, goal: 53 }, genres: ['Thriller', 'Sci-Fi', 'Romance', 'Historical Fiction', 'Non-Fiction'] },
     { name: '& Also', color: 'bg-stone-700 text-white', also: [
       'On repeat today: Billy Talent, Rawayana, Bad Bunny, Gorillaz. The algorithm has trust issues.',
