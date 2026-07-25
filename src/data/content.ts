@@ -146,8 +146,8 @@ export const site = {
   ],
 
   now: {
-    reading: { title: 'The Anniversary', author: 'Alex Finlay', genre: 'Thriller', take: "Halfway in and already can't trust anyone." },
-    watching: { title: 'A League of Their Own', type: 'Film', genre: 'Sports Drama', take: 'Caught me on the first pitch. Four stars.' },
-    tennis: { status: 'Glasnevin LTC Senior Tour 1000 Open 2026', record: '14W – 4L', note: 'Leinster Spring League Doubles Champions, May 2026' },
+    reading: { title: 'The Tainted Cup', author: 'Robert Jackson Bennett', genre: 'Fantasy', take: "It's a biopunk whodunnit that has me hooked so far." },
+    watching: { title: 'The Odyssey', type: 'Film', genre: 'Epic Adventure', take: 'Greek John Wick, but with a bow. Had me completely strung along.' },
+    tennis: { status: 'Malahide LTC Senior Tour 1000 Open 2026', record: '17W – 7L', note: 'Leinster Spring League Doubles Champions, May 2026' },
   },
 };
