@@ -19,13 +19,12 @@ import { site } from '../data/content';
       </div>
 
       <a
-        id="contact-email"
-        href="#"
-        data-u="rivrom18"
-        data-d="gmail.com"
+        href={site.social.linkedin}
+        target="_blank"
+        rel="noopener"
         class="inline-block font-display text-xl md:text-2xl font-bold text-stone-900 hover:text-blue-900 transition-colors underline underline-offset-4 decoration-blue-200 hover:decoration-blue-900 mb-12"
       >
-        ✉ get in touch
+        Message me on LinkedIn →
       </a>
     </div>
 
@@ -51,15 +50,6 @@ import { site } from '../data/content';
 
   </div>
 </section>
-
-<script>
-  const el = document.getElementById('contact-email') as HTMLAnchorElement | null;
-  if (el) {
-    const addr = el.dataset.u + '@' + el.dataset.d;
-    el.href = 'mailto:' + addr;
-    el.textContent = addr;
-  }
-</script>
 
 <footer class="py-8 border-t border-stone-100 text-center">
   <p class="font-body text-xs text-stone-400">
