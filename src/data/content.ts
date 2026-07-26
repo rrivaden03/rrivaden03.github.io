@@ -20,7 +20,7 @@ export const site = {
 
   skills: {
     technical: [
-      { name: 'Embedded Firmware', blurb: 'Eight years of C, FreeRTOS, and hardware that lies about its own behavior.' },
+      { name: 'Embedded Firmware', blurb: 'Nine years of C, FreeRTOS, and hardware that lies about its own behavior.' },
       { name: 'Cloud & IoT', blurb: 'Connecting devices to the cloud and keeping them there. Daily work, not a side skill.' },
       { name: 'Scripting & Tooling', blurb: 'Whatever makes the job less annoying. Usually works on the second try.' },
       { name: 'Web Development', blurb: 'Not the day job, but it shows up. This site is evidence.' },

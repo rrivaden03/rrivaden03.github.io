@@ -25,6 +25,12 @@ const siteUrl = Astro.site ?? new URL('https://rominarivadeneira.com');
     <meta name="theme-color" content="#1e3a8a" />
     <title>{title}</title>
 
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Romina Rivadeneira — Firmware Engineer" />
+    <meta name="twitter:description" content="Venezuelan in Ireland. Building IoT firmware at PetSafe Brands. Tennis fanatic, avid reader, and photographer." />
+    <meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
