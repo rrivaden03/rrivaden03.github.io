@@ -43,7 +43,7 @@ export const site = {
     ],
   },
 
-  experienceIntro: "Eight years, two countries, same company. The problems kept changing — new chips, new protocols, new products — and the mission made it easy to stay. Building things that help pet parents feel safe and connected to their animals is the kind of work I would've called a dream job before I knew what a real job looked like. Turns out it was the first one I landed.",
+  experienceIntro: "Nine years, two countries, same company. The problems kept changing — new chips, new protocols, new products — and the mission made it easy to stay. Building things that help pet parents feel safe and connected to their animals is the kind of work I would've called a dream job before I knew what a real job looked like. Turns out it was the first one I landed.",
 
   experience: [
     {
@@ -52,7 +52,7 @@ export const site = {
       location: 'Dundalk, Ireland',
       period: '2020 — Present',
       current: true,
-      tenureNote: '8+ yrs · same company',
+      tenureNote: '9+ yrs · same company',
       bullets: [
         'Develop firmware for IoT pet products — smart feeders, automatic litterboxes, GPS trackers, and containment systems',
         'Architect a shared embedded platform covering device provisioning, cloud communication, and OTA firmware updates',

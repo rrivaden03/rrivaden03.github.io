@@ -1,12 +1,20 @@
 ---
 const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'About',      href: '#about' },
+  { label: 'Skills',     href: '#skills' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Hobbies', href: '#hobbies' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Hobbies',    href: '#hobbies' },
+  { label: 'Contact',    href: '#contact' },
 ];
 ---
+
+<a
+  href="#about"
+  class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-blue-900 focus:text-white focus:rounded-lg focus:font-body focus:text-sm"
+>
+  Skip to content
+</a>
+
 <header
   id="nav"
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -20,7 +28,8 @@ const links = [
       {links.map(l => (
         <a
           href={l.href}
-          class="text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors"
+          data-section={l.href.slice(1)}
+          class="nav-link text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors"
         >
           {l.label}
         </a>
@@ -52,7 +61,8 @@ const links = [
       {links.map(l => (
         <a
           href={l.href}
-          class="mobile-nav-link text-sm font-medium text-stone-600 hover:text-lime-500 transition-colors"
+          data-section={l.href.slice(1)}
+          class="mobile-nav-link nav-link text-sm font-medium text-stone-600 hover:text-lime-500 transition-colors"
         >
           {l.label}
         </a>
@@ -65,9 +75,9 @@ const links = [
 </header>
 
 <script>
-  const nav = document.getElementById('nav')!;
-  const btn = document.getElementById('menu-btn')!;
-  const menu = document.getElementById('mobile-menu')!;
+  const nav    = document.getElementById('nav')!;
+  const btn    = document.getElementById('menu-btn')!;
+  const menu   = document.getElementById('mobile-menu')!;
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
@@ -84,4 +94,22 @@ const links = [
   document.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', () => menu.classList.add('hidden'));
   });
+
+  // Active section highlighting
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link[data-section]');
+  const sections = document.querySelectorAll<HTMLElement>('section[id]');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          const active = link.dataset.section === entry.target.id;
+          link.classList.toggle('!text-stone-900', active);
+          link.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
 </script>
