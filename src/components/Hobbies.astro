@@ -99,6 +99,54 @@ import { site } from '../data/content';
       ))}
     </div>
 
+    <!-- Tennis stats card -->
+    <div class="reveal mt-4 rounded-2xl bg-stone-800 border border-stone-700/50 p-7 md:p-9">
+
+      <div class="flex items-center justify-between mb-8">
+        <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-400">{site.tennisCard.club}</p>
+        <span class="bg-lime-400/20 text-lime-400 text-xs font-bold font-body px-3 py-1.5 rounded-full">🎾 {site.tennisCard.year}</span>
+      </div>
+
+      <div class="flex justify-around text-center mb-8">
+        <div>
+          <p class="font-display font-black text-white leading-none mb-2" style="font-size: clamp(2.8rem, 7vw, 4.5rem);">{site.tennisCard.wins}</p>
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-400">Wins</p>
+        </div>
+        <div>
+          <p class="font-display font-black text-white leading-none mb-2" style="font-size: clamp(2.8rem, 7vw, 4.5rem);">{site.tennisCard.losses}</p>
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-400">Losses</p>
+        </div>
+        <div>
+          <p class="font-display font-black text-lime-400 leading-none mb-2" style="font-size: clamp(2.8rem, 7vw, 4.5rem);">{Math.round(site.tennisCard.wins / (site.tennisCard.wins + site.tennisCard.losses) * 100)}%</p>
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-400">Win Rate</p>
+        </div>
+      </div>
+
+
+      <div class="border-t border-stone-700 pt-5 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-0">
+        <div>
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Now Playing</p>
+          <p class="font-body text-stone-200 text-sm">{site.tennisCard.tournament}</p>
+        </div>
+        <div class="sm:border-l sm:border-stone-700 sm:pl-6">
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Season Highlight</p>
+          <p class="font-display font-bold text-white text-sm">🏆 {site.tennisCard.achievement}</p>
+        </div>
+      </div>
+
+      <div class="mt-5 flex justify-end">
+        <a
+          href={site.social.tennis}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-body text-xs text-stone-500 hover:text-stone-300 transition-colors flex items-center gap-1.5"
+        >
+          Tennis Ireland profile →
+        </a>
+      </div>
+
+    </div>
+
     <!-- Gallery teaser -->
     <div class="reveal mt-4">
       <div class="grid grid-cols-3 gap-3">
@@ -133,7 +181,7 @@ import { site } from '../data/content';
         <span class="font-body text-xs font-bold uppercase tracking-widest text-stone-400">Right Now</span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 sm:divide-x sm:divide-stone-700">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 sm:divide-x sm:divide-stone-700">
 
         <div class="sm:pr-8">
           <p class="font-body text-xs text-stone-500 uppercase tracking-wider mb-2">Reading</p>
@@ -146,7 +194,7 @@ import { site } from '../data/content';
           </a>
         </div>
 
-        <div class="sm:px-8">
+        <div class="sm:pl-8">
           <p class="font-body text-xs text-stone-500 uppercase tracking-wider mb-2">Last Watched</p>
           <p class="font-display font-bold text-white text-lg leading-snug">{site.now.watching.title}</p>
           <span class="inline-block mt-2 mb-2 bg-rose-400/20 text-rose-400 text-sm font-bold font-body px-3 py-1 rounded-full">{site.now.watching.genre}</span>
@@ -154,16 +202,6 @@ import { site } from '../data/content';
           <p class="font-body text-stone-300 text-sm mt-1 italic">{site.now.watching.take}</p>
           <a href={site.social.letterboxd} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-4 font-body text-xs text-stone-500 hover:text-stone-300 transition-colors">
             Letterboxd →
-          </a>
-        </div>
-
-        <div class="sm:pl-8">
-          <p class="font-body text-xs text-stone-500 uppercase tracking-wider mb-2">On the Court</p>
-          <p class="font-display font-bold text-white text-lg leading-snug">{site.now.tennis.status}</p>
-          <span class="inline-block mt-2 mb-2 bg-lime-400/20 text-lime-400 text-sm font-bold font-body px-3 py-1 rounded-full">{site.now.tennis.record}</span>
-          <p class="font-body text-stone-400 text-sm">{site.now.tennis.note}</p>
-          <a href={site.social.tennis} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-4 font-body text-xs text-stone-500 hover:text-stone-300 transition-colors">
-            Tennis Ireland →
           </a>
         </div>
 

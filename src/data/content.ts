@@ -148,9 +148,17 @@ export const site = {
     },
   ],
 
+  tennisCard: {
+    club: 'Dundalk LTC',
+    year: '2026',
+    wins: 17,
+    losses: 7,
+    tournament: 'Malahide LTC Senior Tour 1000 Open',
+    achievement: 'Leinster Spring League Doubles Champions · May 2026',
+  },
+
   now: {
     reading: { title: 'The Tainted Cup', author: 'Robert Jackson Bennett', genre: 'Fantasy', take: "It's a biopunk whodunnit that has me hooked so far." },
     watching: { title: 'The Odyssey', type: 'Film', genre: 'Epic Adventure', take: 'Greek John Wick, but with a bow. Had me completely strung along.' },
-    tennis: { status: 'Malahide LTC Senior Tour 1000 Open 2026', record: '17W – 7L', note: 'Leinster Spring League Doubles Champions, May 2026' },
   },
 };
