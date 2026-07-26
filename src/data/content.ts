@@ -1,3 +1,6 @@
+import cliffsImg from '../assets/cliffs.jpg';
+import tennisImg from '../assets/tennis-team.jpg';
+
 export const site = {
   // Rotating subtitle in the hero — add/remove as you like
   roles: ['Firmware Engineer', 'IoT Builder', 'Tennis Fanatic', 'Pixel Chaser', 'Venezuelan in Ireland'],
@@ -83,8 +86,8 @@ export const site = {
   ],
 
   hobbies: [
-    { name: 'Tennis', blurb: 'Doubles champion. Serves still pending.', badge: '🏆 Doubles Champs', image: '/tennis-team.jpg', alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
-    { name: 'Photography', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: '/cliffs.jpg', alt: 'A crow perched at the Cliffs of Moher, Ireland', objectPos: 'center' },
+    { name: 'Tennis', blurb: 'Doubles champion. Serves still pending.', badge: '🏆 Doubles Champs', image: tennisImg, alt: 'Romina and her Leinster League tennis team holding championship shields at Carlow LTC', objectPos: '60% 50%', scale: 1.2 },
+    { name: 'Photography', blurb: 'Phone in hand. The crow didn\'t even flinch.', image: cliffsImg, alt: 'A crow perched at the Cliffs of Moher, Ireland', objectPos: 'center' },
     { name: 'Reading', color: 'bg-sky-400 text-white', blurb: 'Dark, tense, mysterious, and somehow also hopeful.', progress: { current: 25, goal: 53 }, genres: ['Thriller', 'Sci-Fi', 'Romance', 'Historical Fiction', 'Non-Fiction'] },
     { name: '& Also', color: 'bg-stone-700 text-white', also: [
       'On repeat today: Billy Talent, Rawayana, Bad Bunny, Gorillaz. The algorithm has trust issues.',

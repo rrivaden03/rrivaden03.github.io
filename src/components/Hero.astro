@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import profileImg from '../assets/profile.jpg';
 import { site } from '../data/content';
 ---
 <section class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-stone-50 px-6">
@@ -16,10 +18,12 @@ import { site } from '../data/content';
   <div class="relative text-center max-w-4xl">
     <div class="flex justify-center mb-6">
       <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-white shadow-xl">
-        <img
-          src="/profile.jpg"
+        <Image
+          src={profileImg}
           alt="Romina Rivadeneira"
+          width={200}
           loading="eager"
+          fetchpriority="high"
           class="w-full h-full object-cover object-[50%_50%]"
         />
       </div>

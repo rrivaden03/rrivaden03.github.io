@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://rominarivadeneira.com/sitemap-index.xml
