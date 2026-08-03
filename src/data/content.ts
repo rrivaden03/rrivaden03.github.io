@@ -152,8 +152,8 @@ export const site = {
     club: 'Dundalk LTC',
     year: '2026',
     wins: 17,
-    losses: 7,
-    tournament: 'Malahide LTC Senior Tour 1000 Open',
+    losses: 8,
+    tournament: 'Louth Senior Graded Tour 2026',
     achievement: 'Leinster Spring League Doubles Champions · May 2026',
   },
 
