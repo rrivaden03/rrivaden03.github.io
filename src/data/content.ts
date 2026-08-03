@@ -159,6 +159,6 @@ export const site = {
 
   now: {
     reading: { title: 'The Tainted Cup', author: 'Robert Jackson Bennett', genre: 'Fantasy', take: "It's a biopunk whodunnit that has me hooked so far." },
-    watching: { title: 'The Odyssey', type: 'Film', genre: 'Epic Adventure', take: 'Greek John Wick, but with a bow. Had me completely strung along.' },
+    watching: { title: 'Spider-Man: Brand New Day', type: 'Film', genre: 'Superhero Action', take: 'Peter Parker in pain and suffering is what I have been asking for years.' },
   },
 };
