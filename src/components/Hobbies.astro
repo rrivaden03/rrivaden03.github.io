@@ -125,12 +125,14 @@ import { site } from '../data/content';
 
       <div class="border-t border-stone-700 pt-5 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-0">
         <div>
-          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Now Playing</p>
-          <p class="font-body text-stone-200 text-sm">{site.tennisCard.tournament}</p>
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Status</p>
+          <p class="font-body text-stone-200 text-sm">{site.tennisCard.status}</p>
         </div>
         <div class="sm:border-l sm:border-stone-700 sm:pl-6">
-          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Season Highlight</p>
-          <p class="font-display font-bold text-white text-sm">🏆 {site.tennisCard.achievement}</p>
+          <p class="font-body text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Season Highlights</p>
+          {site.tennisCard.achievements.map((achievement) => (
+            <p class="font-display font-bold text-white text-sm mb-1 last:mb-0">🏆 {achievement}</p>
+          ))}
         </div>
       </div>
 

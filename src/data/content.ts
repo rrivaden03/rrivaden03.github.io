@@ -151,10 +151,13 @@ export const site = {
   tennisCard: {
     club: 'Dundalk LTC',
     year: '2026',
-    wins: 17,
-    losses: 8,
-    tournament: 'Louth Senior Graded Tour 2026',
-    achievement: 'Leinster Spring League Doubles Champions · May 2026',
+    wins: 22,
+    losses: 12,
+    status: 'Training block · no tournaments right now',
+    achievements: [
+      'Leinster Spring League Doubles Champions · May 2026',
+      "Newry Open 2026 Women's Doubles Cup Winner",
+    ],
   },
 
   now: {
